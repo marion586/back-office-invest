@@ -12,7 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .main-wrapper {
-  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;

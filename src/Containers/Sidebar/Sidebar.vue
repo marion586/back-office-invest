@@ -8,10 +8,14 @@
             alt="image de voiture pour le connexion"
           />
         </figure>
-        <h1>Voiture</h1>
+        <h1>INVEST</h1>
       </div>
       <a-menu theme="dark" mode="inline" :default-selected-keys="['1']">
-        <a-menu-item v-for="menu in menu" :key="menu.key">
+        <a-menu-item
+          @click="$emit('on-change-component', menu.item)"
+          v-for="menu in menu"
+          :key="menu.key"
+        >
           <component :is="$antIcons[menu.icon]" twoToneColor="#08c" />
           <span>{{ menu.item }}</span>
         </a-menu-item>
@@ -21,7 +25,7 @@
       <a-layout-header style="background: #fff; padding: 0">
         <div class="sidebar-title">
           <h1>Bienvenue !!!</h1>
-          <p>Une application Vente de Voiture</p>
+          <p>Une application D'investissement en ligne</p>
         </div>
 
         <div class="header-container">

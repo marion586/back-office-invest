@@ -3,37 +3,32 @@
   <div class="content__label-input">
     <label for="mail" class="label-connexion">{{ label }}</label>
     <a-input
-      :id="id"
       class="input-connexion"
       :type="inputType"
       :name="name"
       :placeholder="placeholder"
-      @input="onChange"
-      v-model:value="val"
+      @keyup.enter="
+        $emit('onInput', {
+          name: $event.target.name,
+          value: $event.target.value,
+        })
+      "
     />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      val: this.value,
-    };
-  },
   props: {
     name: {
       inputType: String,
-      default: "",
+      default: "test",
     },
     placeholder: {
       type: String,
       default: "",
     },
-    id: {
-      type: String,
-      default: "",
-    },
+
     inputType: {
       type: String,
       default: "text",
@@ -47,12 +42,7 @@ export default {
       default: "",
     },
   },
-  methods: {
-    onChange(event) {
-      console.log(event);
-      this.$emit("onInput", event);
-    },
-  },
+
   watch: {
     value: {
       immediate: true,

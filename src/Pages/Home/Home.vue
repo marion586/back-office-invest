@@ -1,12 +1,8 @@
 <template>
   <div>
-    <Sidebar>
+    <Sidebar @on-change-component="changeComponent">
       <div class="home-wrapper">
-        <CardInfoVue />
-        <div class="home-content">
-          <ListCarVue />
-          <EventListVue />
-        </div>
+        <component :is="current" />
       </div>
     </Sidebar>
   </div>
@@ -17,6 +13,7 @@ import Sidebar from "../../Containers/Sidebar/Sidebar.vue";
 import CardInfoVue from "@/Containers/CardInfo/CardInfo.vue";
 import ListCarVue from "@/Containers/ListCar/ListCar.vue";
 import EventListVue from "@/Containers/EventList/EventList.vue";
+import Accueil from "@/Containers/Accueil/Accueil.vue";
 export default {
   fetch() {
     console.log("first");
@@ -27,9 +24,17 @@ export default {
     CardInfoVue,
     ListCarVue,
     EventListVue,
+    Accueil,
   },
   data() {
-    return {};
+    return {
+      current: "CardInfoVue",
+    };
+  },
+  methods: {
+    changeComponent: function (e) {
+      this.current = e;
+    },
   },
 };
 </script>

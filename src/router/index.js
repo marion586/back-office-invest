@@ -19,6 +19,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../Pages/Home/Home.vue"),
   },
+  {
+    path: "/note-app",
+    name: "note-app",
+    component: () => import("../Pages/note-app/index.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

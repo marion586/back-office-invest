@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <MainVue>
-      <SignInVue />
-    </MainVue>
-  </div>
+  <MainVue>
+    <SignInVue />
+  </MainVue>
 </template>
 
 <script>
