@@ -7,12 +7,7 @@
       :type="inputType"
       :name="name"
       :placeholder="placeholder"
-      @keyup.enter="
-        $emit('onInput', {
-          name: $event.target.name,
-          value: $event.target.value,
-        })
-      "
+      @input="$emit('onInput', $event)"
     />
   </div>
 </template>
@@ -58,7 +53,8 @@ export default {
 <style lang="scss" scoped>
 .label-connexion {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 .content {
   display: flex;
@@ -105,7 +101,7 @@ export default {
   }
 }
 .input-connexion {
-  width: 330px;
+  width: 100%;
   height: 40px;
   background: #f5f9f9;
   border-radius: 10px;

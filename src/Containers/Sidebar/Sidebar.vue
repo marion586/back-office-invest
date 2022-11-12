@@ -56,22 +56,22 @@ import img from "../../assets/logo.jpg";
 const menu = [
   {
     key: 1,
-    item: "Accueil",
+    item: "Categorie",
     icon: "HomeOutlined",
   },
   {
     key: 2,
-    item: "Voiture",
+    item: "Projet",
     icon: "CarOutlined",
   },
   {
     key: 3,
-    item: "Vente",
+    item: "Listes de demandes",
     icon: "ShoppingCartOutlined",
   },
   {
     key: 4,
-    item: "Users",
+    item: "Utilisateurs",
     icon: "UsergroupAddOutlined",
   },
   {
@@ -91,7 +91,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .ant-layout-content {
   border-radius: 10px;
 }

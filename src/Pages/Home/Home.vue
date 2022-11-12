@@ -13,7 +13,7 @@ import Sidebar from "../../Containers/Sidebar/Sidebar.vue";
 import CardInfoVue from "@/Containers/CardInfo/CardInfo.vue";
 import ListCarVue from "@/Containers/ListCar/ListCar.vue";
 import EventListVue from "@/Containers/EventList/EventList.vue";
-import Accueil from "@/Containers/Accueil/Accueil.vue";
+import Categorie from "@/Containers/Categorie/Categorie.vue";
 export default {
   fetch() {
     console.log("first");
@@ -24,7 +24,7 @@ export default {
     CardInfoVue,
     ListCarVue,
     EventListVue,
-    Accueil,
+    Categorie,
   },
   data() {
     return {
