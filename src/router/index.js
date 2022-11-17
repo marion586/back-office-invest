@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: "/",
+    path: "/connexion",
     name: "connexion",
     component: () =>
       import(/* webpackChunkName: "about" */ "../Pages/SignIn/SignIn.vue"),
@@ -15,6 +15,12 @@ const routes = [
   },
   {
     path: "/homePath",
+    name: "home",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../Pages/Home/Home.vue"),
+  },
+  {
+    path: "/",
     name: "home",
     component: () =>
       import(/* webpackChunkName: "about" */ "../Pages/Home/Home.vue"),
