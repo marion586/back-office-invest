@@ -171,4 +171,15 @@ img {
   flex-direction: column;
   gap: 30px;
 }
+
+::deep() {
+  .ant-menu-title-content {
+    flex: auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+  }
+}
 </style>
